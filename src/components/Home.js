@@ -16,6 +16,7 @@ function Home() {
         }));
 
         console.log('posts', posts);
+        setPosts(posts);
         // Do something with the 'posts' data, e.g., set it to a state variable
       } catch (error) {
         console.error('Error fetching data:', error);
@@ -27,9 +28,9 @@ function Home() {
 
     return (
       <div className="home">
-        <h1>Bug Blog</h1>
+        <h1>Aman's Bug</h1>
         <div id = "blog-by">
-          Aman's Bug
+          Bugs are the creators of new technologies!
         </div>
         {posts.map ((post, index)=>(
           <div className='post' key={`post-${index}`}>
