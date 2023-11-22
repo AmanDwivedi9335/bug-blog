@@ -28,7 +28,7 @@ function PostDetail() {
 
   return (
     <div className="post-detail">
-      <h1>{post.title}</h1>
+      <h1 style={{ color: '#2196f3' }}>{post.title}</h1>
       <p>{post.content}</p>
     </div>
   );

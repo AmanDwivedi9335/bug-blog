@@ -2,6 +2,7 @@ import { useState } from "react";
 import {db} from "../firebase";
 import { addDoc, collection } from "firebase/firestore";
 import {useFormInput} from "../hooks";
+import classes from '../Button.module.css';
 
 function CreatePost() {
 
@@ -50,7 +51,7 @@ function CreatePost() {
           <textarea {...content}> </textarea>
         </div>
 
-        <button className="create-post-btn">Create Post</button>
+        <button className={classes.createPostBtn}>Create Post</button>
 
       </form>
 

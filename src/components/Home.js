@@ -2,6 +2,13 @@ import {useEffect, useState} from 'react';
 import {db} from "../firebase";
 import { Link } from 'react-router-dom';
 import { collection, getDocs } from 'firebase/firestore'; 
+import styled from 'styled-components';
+
+const BlogHeading = styled.h1`
+text-align: center;
+color: ${(props) => props.primary ? '#2196f3' : 'red'};
+margin-bottom: 2px;
+`;
 
 function Home() {
   const [posts, setPosts] = useState([]);
@@ -28,7 +35,7 @@ function Home() {
 
     return (
       <div className="home">
-        <h1>Aman's Bug</h1>
+        <BlogHeading primary>Aman's Bug</BlogHeading>
         <div id = "blog-by">
           Bugs are the creators of new technologies!
         </div>
